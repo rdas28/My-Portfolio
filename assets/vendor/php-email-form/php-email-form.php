@@ -35,7 +35,7 @@ class PHP_Email_Form {
     }
 
     private function send_with_smtp() {
-        require 'PHPMailer/PHPMailerAutoload.php'; // Ensure PHPMailer is installed
+        require __DIR__ . '/../../vendor/autoload.php'; // Ensure PHPMailer is installed
         $mail = new PHPMailer();
         $mail->isSMTP();
         $mail->Host = $this->smtp['host'];
